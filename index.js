@@ -16,10 +16,11 @@ app.use(morgan('dev'))
 
 app.post('/', async (req, res) => {
   const htmlString = req.body // Assuming the HTML string is in the request body
-
+  const $ = cheerio.load(htmlString.data)
   const title = $('title').text()
+  const fileName = `${title}.html`.replace(/[<>:"/\\|?*]/g, '_') // Replace invalid characters with underscore
   fs.writeFileSync(
-    path.join(__dirname, 'html', `${title}.html`),
+    path.join(__dirname, 'html', fileName),
     htmlString.data,
     'utf-8'
   )
