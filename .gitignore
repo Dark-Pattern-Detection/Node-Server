@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build output
+dist/
+build/
+out/
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
