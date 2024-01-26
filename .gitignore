@@ -27,3 +27,8 @@ out/
 *.njsproj
 *.sln
 *.sw*
+
+
+# scrapped websites
+*.html
+
