@@ -171,9 +171,9 @@ const getTextData = ($) => {
   let idCounter = 1
   $('div').each((index, element) => {
     const divElm = $(element)
-    const text = divElm.text().trim()
+    const text = divElm.text().trim().replace(/\s+/g, ' ')
     if (divElm.find('div').length === 0 && text.length > 0) {
-      //it should not have any child div and text length should be greater then 0.
+      // it should not have any child div and text length should be greater than 0.
       textWithId.push({
         text,
         class: divElm.attr('class'),

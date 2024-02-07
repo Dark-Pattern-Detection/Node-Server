@@ -32,3 +32,4 @@ out/
 # scrapped websites
 *.html
 
+test/
